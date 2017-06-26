@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.common.json",
+    "compileOnSave": true,
+    "compilerOptions": {
+        "outDir": "spec",
+        "types": [
+            "jasmine"
+        ],
+        "sourceMap": true
+    },
+    "include": [
+        "src/test/**/*.ts"
+    ]
+}

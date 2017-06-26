@@ -1,0 +1,10 @@
+src
+spec
+tsconfig.test.json
+jasmine.json
+.gitlab-ci.yml
+tsconfig*.json
+tslint.json
+package
+.npmignore
+.vscode/

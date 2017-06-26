@@ -1,0 +1,83 @@
+# Beschreibt wie unsere CI/CD Pipeline mit der Gitlab-CI funktioniert
+#
+# Referenz: https://docs.gitlab.com/ce/ci/yaml/
+# Linter: https://gitsc.emundo.eu/ci/lint
+# Doku: https://gitsc.emundo.eu/help/ci/README.md
+#
+# Authoren: Oliver Broome
+#           Lukas Lisowski
+#           Simon Nagl
+
+# Wir brauchen genau dieses Image und kein Alpine weil sonst u.a. Karma, Jasmine
+# und der Webpack Build nicht ordentlich läuft
+image: node:latest
+
+stages:
+  - rebased
+  - compile
+  - package
+  - test
+  - publish
+
+cache:
+  key: "default"
+  paths:
+  - node_modules/
+
+# Wird vor jeder stage ausgeführt.
+before_script:
+  # Nun stellen wir nochmal sicher, dass alle npm-Pakete im Cache vorhanden sind
+  - npm install
+  # und löschen die überzähligen
+  - npm prune
+
+rebased:
+  stage: rebased
+  # Wir brauchen hier einfach nur kurz und bündig ein Git image
+  image: docker:git
+  only:
+    # die Prüfung ob gerebased ist passiert nur in Branches
+    - branches
+    # oder durchs antriggern
+    - triggers
+  cache:
+    # wir brauchen keinen Cache
+    key: "none"
+  before_script:
+    # Wir brauchen die allgemeinen Skripte hier nicht
+    - echo "check if branch is rebased on master"
+  script:
+    # Variable wird mit Gitlab >= 9.0 auf CI_COMMIT_REF_NAME umbenannt. TODO Lukas/Oliver
+    - if ! git merge-base --is-ancestor origin/master origin/$CI_BUILD_REF_NAME ; then exit 1; fi
+
+compile:
+  stage: compile
+  script:
+    - npm run build
+
+build:
+  stage: package
+  script:
+    - npm run build
+    - npm pack
+  artifacts:
+    when: on_success
+    expire_in: 1 week
+    paths:
+    - jsog-ts-*.tgz
+
+test:
+  stage: test
+  script:
+    - npm run test
+
+deploy-npm:
+  stage: publish
+  only:
+    - manual
+    - tags
+  script:
+    # Wir bauen die Anwendung für die Zielumgebung mit der Config
+    - npm run build
+    - echo "TODO Create .npmrc with token from secrete gitlab variable"
+    - npm publish
