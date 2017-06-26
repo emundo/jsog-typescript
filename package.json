@@ -11,6 +11,9 @@
     "test": "jasmine --config=jasmine.json",
     "prepare": "npm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/e-mundo/jsog-ts.git"
