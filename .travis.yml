@@ -8,4 +8,4 @@ deploy:
     secure: EkoXfGTgycBZZf6J1YvW937PRnqxHJ78bwOYG1/sB6khhh6aHPDkLEAZWf+X5dnj4MmfUfNdd1UdZKqxhx+GBTdaqQsgYruNbxkfuA/UpiqGN59P5vWz15NFl9sXJPzBIUQR9Mh2fKmzCjvvn0sKQo/oENx8/5k28MU4pZNYHUI2US0mhKRwp7JF+zrVrnsbqGnmZtuLMWONTfrMUhM6tKhPWzAFKAjVLTNWYYyvD4etv2CBk4uCWXVwQMYrp13lXjpl6sLyWTQrUS/hopRcE9R001O044kPR1TmfLj98XkXEo+Uwin/3nnTL0z3OzswGX/UnOXLsTtqvY4QZeTBa0lmrJHYinXb7rSUIXePC+yZEKyU4kjQwMzNDqlhhmVJKQBNLEBXygKxCfPKT10WFK2Vk4y+p+drvD8OSuZqLJY3fDjjPeDTZ7DbaFIfA0140pyl8Ya1hpuJW2wddnH3V2mISObH+1zklyZNJj2+dptSohG4YcyjVCNKMNLxmtV6ApMXt/hIiJDELSs40lKw8H7mOq/gZjfMOxEJw14aYmmDBhmJS/+Q35gYb4Ztls/sj6ad6AkLcYx8kKG6gjf3wXS+nwX1c6eF4zKDiAReR4t52Hv9scj4zfEj+0tP2pXk6gv2ab1f08DOgz8Eo44Un6ncTUzl8TSV57YUtt8gFNY=
   on:
     tags: true
-    repo: e-mundo/jsog-ts
+    repo: e-mundo/jsog-typescript

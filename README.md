@@ -8,7 +8,7 @@ It is able to instantiante typescript objects during deserialization.
 ### Installation
 
 ```
-npm --save jsog-ts
+npm --save jsog-typescript
 ```
 
 Enable typescript `experimentalDecorator` and `emitDecoratorMetadata` compiler options.
@@ -28,7 +28,7 @@ Minimal tslint.json:
 Generate a new instance of the service. See Integration for integration to some popular frameworks.
 
 ```
-import { jsogService } from 'jsog-ts'
+import { jsogService } from 'jsog-typescript'
 
 const jsog = new JsogService();
 ```
@@ -59,7 +59,7 @@ Provide JsogService as an Angular 4 Service which can be injected into your Comp
 
 ```
 import { NgModule } from '@angular/core';
-import { JsogService } from 'jsog-ts';
+import { JsogService } from 'jsog-typescript';
 
 @NgModule({
     providers: [
@@ -74,7 +74,7 @@ Register JsogService as an Angular Service
 
 ```
 import { module } from 'angular';
-import { JsogService } from 'jsog-ts';
+import { JsogService } from 'jsog-typescript';
 
 module.service('JsogService', JsogService)
 ```
