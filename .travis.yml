@@ -9,3 +9,8 @@ deploy:
   on:
     tags: true
     repo: e-mundo/jsog-typescript
+
+after_success:
+  # Send coverage to codacy
+  - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
+
