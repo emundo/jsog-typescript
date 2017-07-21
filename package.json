@@ -8,7 +8,7 @@
     "prebuild": "tslint --config tslint.json --type-check --project tsconfig.json --format stylish",
     "build": "tsc -p tsconfig.json",
     "pretest": "tslint --config tslint.json --type-check --project tsconfig.test.json --format stylish && tsc -p tsconfig.test.json",
-    "test": "jasmine --config=jasmine.json",
+    "test": "istanbul cover node_modules/jasmine/bin/jasmine.js  -- --config=jasmine.json",
     "prepare": "npm run build"
   },
   "publishConfig": {
@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.51",
+    "codacy-coverage": "^2.0.2",
+    "istanbul": "^0.4.5",
     "jasmine": "^2.6.0",
     "jasmine-spec-reporter": "^4.1.1",
     "moment": "^2.18.1",

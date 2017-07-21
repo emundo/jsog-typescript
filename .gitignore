@@ -2,6 +2,7 @@ node_modules
 dist
 spec
 package
+coverage
 
 # macOS
 .DS_Store
