@@ -17,6 +17,6 @@ deploy:
     repo: e-mundo/jsog-typescript
 
 after_success:
-  # Send coverage to codacy
-  - cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage
+  # Remap javascript coverage to typescript files and send it to codacy
+  - cat ./coverage/coverage.json | ./node_modules/.bin/remap-istanbul -t lcovonly | ./node_modules/.bin/codacy-coverage
 
