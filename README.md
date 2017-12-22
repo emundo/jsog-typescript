@@ -12,7 +12,7 @@ It is able to instantiante typescript objects during deserialization.
 ### Installation
 
 ```
-npm --save jsog-typescript
+npm install --save jsog-typescript
 ```
 
 Enable typescript `experimentalDecorator` and `emitDecoratorMetadata` compiler options.
