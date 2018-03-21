@@ -167,7 +167,7 @@
         "no-backbone-get-set-outside-model": false,
         "no-constant-condition": true,
         "no-control-regex": true,
-        "no-duplicate-case": true,
+        "no-duplicate-switch-case": true,
         "no-invalid-regexp": true,
         "no-invalid-this": true,
         "no-jquery-raw-elements": true,
@@ -180,15 +180,14 @@
         "react-this-binding-issue": true,
         "use-isnan": true,
         "use-named-parameter": true,
-        "valid-typeof": true,
         "new-parens": true,
-        "no-empty-interfaces": true,
+        "no-empty-interface": true,
         "no-for-in": true,
         "no-function-expression": true,
         "no-multiline-string": true, // multiline-strings often introduce unnecessary whitespace into the string literals
         "no-typeof-undefined": true,
         "no-unnecessary-local-variable": true,
-        "no-var-self": true,
+        "no-this-assignment": true,
         "one-variable-per-declaration": [
             true
         ],
