@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prebuild": "tslint --config tslint.json --type-check --project tsconfig.json --format stylish",
+    "prebuild": "tslint --config tslint.json --project tsconfig.json --format stylish",
     "build": "tsc -p tsconfig.json",
-    "pretest": "tslint --config tslint.json --type-check --project tsconfig.test.json --format stylish && tsc -p tsconfig.test.json",
+    "pretest": "tslint --config tslint.json --project tsconfig.test.json --format stylish && tsc -p tsconfig.test.json",
     "test": "istanbul cover node_modules/jasmine/bin/jasmine.js  -- --config=jasmine.json",
     "prepare": "npm run build"
   },
