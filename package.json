@@ -39,6 +39,7 @@
     "jasmine-spec-reporter": "^4.1.1",
     "moment": "^2.18.1",
     "remap-istanbul": "^0.9.5",
+    "lodash.template": ">=4.5.0",
     "tslint": "^5.4.3",
     "tslint-microsoft-contrib": "^5.0.0",
     "tsutils": "=1.6.0",
