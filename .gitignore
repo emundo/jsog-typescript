@@ -3,6 +3,7 @@ dist
 spec
 package
 coverage
+.nyc_output
 
 # macOS
 .DS_Store
