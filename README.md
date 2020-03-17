@@ -1,6 +1,7 @@
 # JavaScript Object Graphs with Typescript
 
 [![Build Status](https://travis-ci.org/emundo/jsog-typescript.svg?branch=master)](https://travis-ci.org/emundo/jsog-typescript)
+[![Coverage Status](https://coveralls.io/repos/github/emundo/jsog-typescript/badge.svg)](https://coveralls.io/github/emundo/jsog-typescript)
 
 This Typescript module implements [JSOG format](https://github.com/jsog/jsog).
 It is able to instantiante typescript objects during deserialization.
