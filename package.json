@@ -9,7 +9,7 @@
     "build": "tsc -p tsconfig.json",
     "pretest": "tslint --config tslint.json --project tsconfig.test.json --format stylish && tsc -p tsconfig.test.json",
     "test": "jasmine --config=jasmine.json",
-    "coverage": "nyc npm run test",
+    "coverage": "nyc npm run test && nyc report --reporter=text-lcov | coveralls",
     "prepare": "npm run build"
   },
   "publishConfig": {
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.51",
+    "coveralls": "^3.0.9",
     "jasmine": "^2.6.0",
     "jasmine-spec-reporter": "^4.1.1",
     "lodash.template": ">=4.5.0",
