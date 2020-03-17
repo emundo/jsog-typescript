@@ -1,8 +1,6 @@
 # JavaScript Object Graphs with Typescript
 
 [![Build Status](https://travis-ci.org/emundo/jsog-typescript.svg?branch=master)](https://travis-ci.org/emundo/jsog-typescript)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1aa8312b430447083609f8ca5519136)](https://www.codacy.com/app/simonnagl/jsog-typescript?utm_source=github.com&utm_medium=referral&utm_content=emundo/jsog-typescript&utm_campaign=badger)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/f1aa8312b430447083609f8ca5519136)](https://www.codacy.com/app/simonnagl/jsog-typescript?utm_source=github.com&utm_medium=referral&utm_content=emundo/jsog-typescript&utm_campaign=Badge_Coverage)
 
 This Typescript module implements [JSOG format](https://github.com/jsog/jsog).
 It is able to instantiante typescript objects during deserialization.
